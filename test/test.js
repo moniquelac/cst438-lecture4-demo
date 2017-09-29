@@ -63,5 +63,17 @@ describe("Getty api call", function() {
     }); 
     
     
+    it("error should be null", function(done) {
+        
+        getty.makeApiRequest(function(error, imgURI) {
+            //console.log("tweets: " + tweets.length); 
+            console.log("imageURI!: " + imgURI); 
+            
+            expect(error).to.be.a('null'); 
+            done(); 
+        });
+    }); 
+
+    
     
 }); 
